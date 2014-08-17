@@ -1,9 +1,12 @@
 #import <Foundation/Foundation.h>
+#import "OSCache.h"
 
 typedef void (^ELAFetchCallback)(id);
 typedef void (^ELAResultCallback)(id);
 
-@interface ELAWellCached : NSCache
+// Kurt Arnlund - Ingenious Arts and Technologies LLC - 8/16/2014
+// Switched this class to use OSCache for open source caching
+@interface ELAWellCached : OSCache
 
 @property (assign, nonatomic, readonly) NSTimeInterval expireDuration;
 
